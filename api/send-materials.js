@@ -33,7 +33,7 @@ export default async function handler(req, res) {
     const token = createDownloadToken({ email, hasAddon });
 
     const site = process.env.SITE_BASE_URL || "https://playerdriven.io";
-    const downloadUrl = `${site.replace(/\/$/, "")}/download?token=${encodeURIComponent(token)}`;
+    const downloadUrl = `${site.replace(/\/$/, "")}/thankyou?token=${encodeURIComponent(token)}`;
 
     const loopsApiKey = process.env.LOOPS_API_KEY;
     const transactionalId = process.env.LOOPS_TRANSACTIONAL_ID;
